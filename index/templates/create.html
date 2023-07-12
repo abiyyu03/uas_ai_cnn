@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		body {
+			background: #ffa600;
+		}
+		.container {
+			width: 100%;
+			margin: 4rem 0;
+			display: flex;
+			justify-content: center;
+		}
+		.card {
+			border: 1px solid black;
+			padding: 2rem;
+			max-width: fit-content;
+			border-radius: 0.5rem;
+			background: #fff;
+		}
+		h1,
+		p {
+			font-family: sans-serif;
+		}
+		h1 {
+			text-align: center;
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+		p {
+			margin-bottom: 2.5rem;
+		}
+		.form-button {
+			margin-top: 1rem;
+			display: block;
+			border: none;
+			padding: 1rem;
+			background: #ffa600;
+			color: white;
+			border-radius: 0.5rem;
+			width: 100%;
+			cursor: pointer;
+		}
+		.form-button:hover {
+			background: #ca8300;
+		}
+		.form-input {
+			display: block;
+		}
+	</style>
+	<body>
+		<div class="container">
+			<div class="card">
+				<h1>Pendeteksi Plat Nomor</h1>
+				<p>Plat nomor harus berjarak kurang lebih 1 meter pada saat difoto</p>
+				<form action="/result/" method="POST" enctype="multipart/form-data">
+					{% csrf_token %}
+					<input type="file" class="form-input" name="plate_image" accept="images/*" />
+					<button type="submit" class="form-button">Deteksi Karakter !</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

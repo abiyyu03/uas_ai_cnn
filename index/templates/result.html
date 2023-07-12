@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		body {
+			background: #ffa600;
+		}
+		.container {
+			margin: 4rem 0;
+			display: flex;
+			justify-content: center;
+		}
+		.card {
+			max-width: fit-content;
+			border: 1px solid black;
+			padding: 2rem;
+			border-radius: 0.5rem;
+			background: #fff;
+		}
+		h1,
+		p {
+			font-family: sans-serif;
+			text-align: center;
+		}
+		.result {
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 1rem;
+			background-color: #00cc00;
+			color: #fff;
+			padding: 1rem;
+			border-radius: 0.6rem;
+			width: fit-content;
+		}
+		p {
+			margin-bottom: 2.5rem;
+		}
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+			max-width: 34%;
+			margin-bottom: 1.1rem;
+		}
+		.inputan {
+			text-align: center;
+			padding: 1rem;
+			border-radius: 0.6rem;
+			font-size: 2.4rem;
+			/* display: block; */
+		}
+		.sub2 {
+			display: flex;
+			margin: auto;
+			justify-content: center;
+		}
+		a {
+			background: #ffa600;
+			color: #fff;
+			padding: 1rem;
+			border-radius: 0.6rem;
+			align-items: center;
+			margin-right: 0.5rem;
+			text-decoration: none;
+			display: flex;
+			align-items: center;
+		}
+	</style>
+	<body>
+		<div class="container">
+			<div class="card">
+				{% if uploaded_image %}
+				<!-- <p>File uploaded at: <a href="{{ uploaded_image }}">{{ uploaded_image }}</a></p> -->
+				<div class="sub">
+					<h1>Plat Nomor Terdeteksi !</h1>
+					<img src="{{uploaded_image}}" alt="" />
+				</div>
+				<div class="sub2">
+					<a href="/">Kembali</a>
+					<input type="text" value="{{result}}" class="inputan" readonly />
+					<!-- <h1 class="result">{{result}}</h1> -->
+				</div>
+				{% else %}
+				<p>Ga keupload bor</p>
+				{% endif %}
+			</div>
+		</div>
+	</body>
+</html>
