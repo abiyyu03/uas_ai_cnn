@@ -4,6 +4,7 @@ from django.template import loader
 from django.core.files.storage import FileSystemStorage
 from django.views.decorators.csrf import csrf_exempt
 import numpy as np 
+import cv2 as cv
 import os, tensorflow as tf
 from tensorflow import keras
 from django.conf import settings  

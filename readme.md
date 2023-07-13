@@ -6,6 +6,7 @@ Number Plate Reader for Indonesian number plate
 - Django 3.2
 - Tensorflow 2.11.0
 - Numpy 1.21.6 
+- OpenCV 4.8.0
 
 ## Source and reference
 - [https://github.com/img88/ALPR_IndonesiaPlateNumber_ComputerVision](https://github.com/img88/ALPR_IndonesiaPlateNumber_ComputerVision)
